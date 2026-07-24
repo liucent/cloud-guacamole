@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  cloud-guacamole:
+    image: your-repo/cloud-guacamole:latest  # 替换为你的实际镜像名或路径
+    container_name: cloud-guacamole
+    restart: always
+    volumes:
+      - guacamole_db_data:/var/lib/postgresql/data
+    networks: host
